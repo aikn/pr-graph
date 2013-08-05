@@ -1,9 +1,0 @@
-#summary One-sentence summary of this page.
-
-We are using universal POS tags in the part-of-speech tagging task.
-
-Mappings can be found here:
-https://code.google.com/p/universal-pos-tags/downloads/list
-
-We are using a slightly modified version according to this paper:
-http://www.seas.upenn.edu/~taskar/pubs/wikipos_emnlp12.pdf
