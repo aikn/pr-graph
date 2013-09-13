@@ -12,14 +12,14 @@ Conference on Computational Natural Language Learning (CoNLL), 2013.
 
 =Contents=
 
-# Compiling
+1. Compiling
 
-# Graph Building
+2. Graph Building
    a. POS Tagging Graph
 
    b. Handwriting Letters Graph
 
-# Running
+3. Running
    a. Input data format
 
    b. Running PR-graph
