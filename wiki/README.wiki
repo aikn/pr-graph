@@ -33,9 +33,9 @@ The build.xml is included in the repository. Use Ant (http://ant.apache.org/) to
 
 =2a. POS Tagging Graph=
 
-PosTagging Graph building uses a suffix dictionary included in 
+!PosTagging Graph building uses a suffix dictionary included in 
 
-//pr-graph/data/suffix.dict
+{{{//pr-graph/data/suffix.dict}}}
 
 This list of suffixes is extracted from the Wiktionary data.
 
@@ -78,27 +78,28 @@ We use the CoNLL-X (http://ilk.uvt.nl/conll/index.html#dataformat) format for PO
 =3b. Running PR-graph=
 
 For Pos-Tagging, run:
-
-java -cp $CLASSPATH -Xmx8000m programs.TestHighOrderPos -num-labels 100 
- -data-path "lang.train,lang.test"
- -umap-path "lang.map"
- -ngram-path "lang-graph.idx"
- -graph-path "lang-graph.grph"
- -lang-name "lang"
- -sample-fold 0
- -num-sample-folds 10
- -eta 0.2
- -backoff 1e-8
- -gaussian-prior 100
- -graph-strength 0.1
- -num-mstep-iters 300
- -num-estep-iters 10
- -em-stop 0.01
- -estep-stop 0.01
- -mstep-stop 0.00001
- -num-em-iters 20 
- -num-threads 8
+{{{
+java -cp $CLASSPATH -Xmx8000m programs.TestHighOrderPos -num-labels 100 \
+ -data-path "lang.train,lang.test" \
+ -umap-path "lang.map" \
+ -ngram-path "lang-graph.idx" \
+ -graph-path "lang-graph.grph" \
+ -lang-name "lang" \
+ -sample-fold 0 \
+ -num-sample-folds 10 \
+ -eta 0.2 \
+ -backoff 1e-8 \
+ -gaussian-prior 100 \
+ -graph-strength 0.1 \
+ -num-mstep-iters 300 \
+ -num-estep-iters 10 \
+ -em-stop 0.01 \
+ -estep-stop 0.01 \
+ -mstep-stop 0.00001 \
+ -num-em-iters 20 \
+ -num-threads 8 \
  -encoding "LATIN1"
+}}}
 
 *About encoding:
 
@@ -117,20 +118,21 @@ sample-fold from 0 to 9 will get the final results.
 
 
 For handwriting recognition, run:
-
-java -cp $CLASSPATH -Xmx8000m programs.TestHighOrderOCR -num-labels 110
- -data-path "letter.data"
- -graph-path "ocr-graph.grph"
- -sample-fold 0
- -num-sample-folds 10
- -eta 0.2
- -backoff 1e-8
- -gaussian-prior 100
- -graph-strength 1.0
- -num-mstep-iters 300
- -num-estep-iters 10
- -em-stop 0.01
- -estep-stop 0.01
- -mstep-stop 0.00001
- -num-em-iters 20
- -num-threads 8
+{{{
+java -cp $CLASSPATH -Xmx8000m programs.TestHighOrderOCR -num-labels 110 \
+ -data-path "letter.data" \
+ -graph-path "ocr-graph.grph" \
+ -sample-fold 0 \
+ -num-sample-folds 10 \
+ -eta 0.2 \
+ -backoff 1e-8 \
+ -gaussian-prior 100 \
+ -graph-strength 1.0 \
+ -num-mstep-iters 300 \
+ -num-estep-iters 10 \
+ -em-stop 0.01 \
+ -estep-stop 0.01 \
+ -mstep-stop 0.00001 \
+ -num-em-iters 20 \
+ -num-threads 8 \
+}}}
