@@ -42,7 +42,7 @@ This list of suffixes is extracted from the Wiktionary data.
 Universal part-of-speech tags mapping can be found here: 
 https://code.google.com/p/universal-pos-tags/
 
-(D. Das, S. Petrov, and R. McDonald. 2012. A Universal Part-of-Speech Tagset. In Proc. LREC.)
+(D. Das, S. Petrov, and R. !McDonald. 2012. A Universal Part-of-Speech Tagset. In Proc. LREC.)
 
 To run the graph builder, we can do:
 {{{
@@ -60,7 +60,7 @@ java -cp $CLASSPATH -Xmx8000m programs.TestPosGraphBuilder \
  -lang-name "lang"
 }}}
 
-The Graph builder outputs the node index file to -ngram-path, and the graph edge file to -graph-path. More options can be found at config.Config, config.PosConfig and config.PosGraphConfig.
+The Graph builder outputs the node index file to -ngram-path, and the graph edge file to -graph-path. More options can be found at config.Config, config.!PosConfig and config.!PosGraphConfig.
 
 =2b. Handwriting Letters Graph=
 
@@ -112,7 +112,7 @@ There will be tiny difference in optimizing for the CRF base model (probably due
 *-sample-fold and -num-sample-folds:
 
 In the CoNLL 2013 paper, we ran the experiment 10 times by randomly sampling 10 
-different set of training samples, so we used -num-sample-folds = 10.
+different set of training samples, so we used -num-sample-folds=10.
 -sample-fold=0 means it is using the 0-th training set. Averaging through 
 sample-fold from 0 to 9 will get the final results.
 
