@@ -134,5 +134,5 @@ java -cp $CLASSPATH -Xmx8000m programs.TestHighOrderOCR -num-labels 110 \
  -estep-stop 0.01 \
  -mstep-stop 0.00001 \
  -num-em-iters 20 \
- -num-threads 8 \
+ -num-threads 8
 }}}
